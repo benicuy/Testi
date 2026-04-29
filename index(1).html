@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BotCraft Pro | WA, TG, Discord Bot Generator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1><i class="fas fa-robot"></i> BotCraft Pro</h1>
+            <p>Generate bot lengkap | Anti Link | Anti Spam | Auto Reply | QR Code / Pairing Code</p>
+            <div class="badge-group">
+                <span class="badge"><i class="fab fa-whatsapp"></i> WhatsApp</span>
+                <span class="badge"><i class="fab fa-telegram"></i> Telegram</span>
+                <span class="badge"><i class="fab fa-discord"></i> Discord</span>
+                <span class="badge"><i class="fas fa-qrcode"></i> QR / Pairing</span>
+                <span class="badge"><i class="fas fa-shield-alt"></i> Anti Spam</span>
+            </div>
+        </div>
+
+        <div class="dashboard">
+            <!-- Panel Kiri -->
+            <div class="generator-panel">
+                <h2><i class="fas fa-code-branch"></i> Konfigurasi Bot</h2>
+                
+                <div class="platform-selector">
+                    <div class="plat-btn active" data-platform="whatsapp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </div>
+                    <div class="plat-btn" data-platform="telegram">
+                        <i class="fab fa-telegram"></i> Telegram
+                    </div>
+                    <div class="plat-btn" data-platform="discord">
+                        <i class="fab fa-discord"></i> Discord
+                    </div>
+                </div>
+
+                <!-- Tab Konfigurasi -->
+                <div class="config-tabs">
+                    <button class="config-tab-btn active" data-config="basic">🔧 Basic</button>
+                    <button class="config-tab-btn" data-config="auth">🔐 Autentikasi</button>
+                    <button class="config-tab-btn" data-config="security">🛡️ Security</button>
+                    <button class="config-tab-btn" data-config="auto">🤖 Auto Reply</button>
+                </div>
+
+                <div id="dynamic-fields"></div>
+
+                <div class="btn-group">
+                    <button id="generateBtn" class="gen-btn"><i class="fas fa-magic"></i> Generate Kode</button>
+                    <button id="downloadAllBtn" class="download-btn"><i class="fas fa-download"></i> Download Semua</button>
+                </div>
+            </div>
+
+            <!-- Panel Kanan -->
+            <div class="output-panel">
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="index">index.js</button>
+                    <button class="tab-btn" data-tab="config">config.js</button>
+                    <button class="tab-btn" data-tab="package">package.json</button>
+                </div>
+                <div class="code-container">
+                    <pre id="indexCode" class="code-block active"><span class="empty-code">✨ Generate kode akan muncul di sini ✨</span></pre>
+                    <pre id="configCode" class="code-block"><span class="empty-code">✨ Generate kode akan muncul di sini ✨</span></pre>
+                    <pre id="packageCode" class="code-block"><span class="empty-code">✨ Generate kode akan muncul di sini ✨</span></pre>
+                </div>
+                <div class="copy-footer">
+                    <button id="copyCurrentBtn" class="copy-btn"><i class="far fa-copy"></i> Salin File Aktif</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-note">
+            <i class="fas fa-info-circle"></i> WhatsApp: Pilih QR Code atau Pairing Code. Session disimpan secara lokal, tidak perlu scan ulang tiap restart.
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
